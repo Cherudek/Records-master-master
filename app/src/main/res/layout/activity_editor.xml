@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2016 The Android Open Source Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+--><!-- Layout for the editor -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin"
+    tools:context=".EditorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Album Name  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Album Name category -->
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/category_album_name" />
+
+            <!-- Album Name field -->
+            <EditText
+                android:id="@+id/edit_album_name"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_album_name"
+                android:inputType="textCapWords" />
+
+        </LinearLayout>
+
+
+        <!-- Band Name  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Band Name category -->
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/category_band_name" />
+
+            <!-- Band Name field -->
+            <EditText
+                android:id="@+id/edit_band_name"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_band_name"
+                android:inputType="textCapWords" />
+
+        </LinearLayout>
+
+        <!-- Price   -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Price  category -->
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/category_price" />
+
+            <!-- Price Input field -->
+            <EditText
+                android:id="@+id/edit_price"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_price"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <!-- Quantity   -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Quantity category -->
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/category_quantity" />
+
+            <!-- Quantity input Field -->
+            <EditText
+                android:id="@+id/edit_quantity"
+                style="@style/EditorFieldStyle"
+                android:layout_weight="1"
+                android:hint="@string/hint_Quantity"
+                android:inputType="number" />
+
+            <!-- Quantity Update Buttons -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <!-- Add Record in inventory -->
+                <Button
+                    android:id="@+id/plus"
+                    style="@style/PlusMinusButtonStyle"
+                    android:text="@string/plus" />
+
+                <!-- remove Record in inventory -->
+                <Button
+                    android:id="@+id/minus"
+                    style="@style/PlusMinusButtonStyle"
+                    android:text="@string/minus" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Album Cover   -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Cover  category -->
+        <TextView
+            style="@style/CategoryStyleCover"
+            android:text="@string/category_album_cover" />
+
+
+            <Button
+                android:id="@+id/add_image"
+                style="@style/PlusMinusButtonStyle"
+                android:layout_gravity="center"
+                android:text="@string/plus" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/edit_image_cover"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:src="@mipmap/add_record_cover" />
+
+
+    </LinearLayout>
+
+    <!-- Supplier Name   -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Supplier Name category -->
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/category_supplier_name" />
+
+        <!-- Supplier name input Field -->
+        <EditText
+            android:id="@+id/edit_supplier_name"
+            style="@style/EditorFieldStyle"
+            android:hint="@string/hint_Supplier_name"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <!-- Supplier  email  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Supplier email category -->
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/category_supplier_email" />
+
+        <!-- Supplier email input Field -->
+        <EditText
+            android:id="@+id/edit_supplier_email"
+            style="@style/EditorFieldStyle"
+            android:hint="@string/hint_Supplier_email"
+            android:inputType="textEmailAddress" />
+    </LinearLayout>
+
+    <!-- Email Supplier Button -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/email_button"
+            style="@style/emailButton"
+            android:background="@drawable/ic_email_black_24dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

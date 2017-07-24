@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2016 The Android Open Source Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- Name for the application [CHAR LIMIT=12] -->
+    <string name="app_name">Records</string>
+
+    <!-- Label for overflow menu option that inserts fake record data into the app [CHAR LIMIT=20] -->
+    <string name="action_insert_dummy_data">Insert Dummy Data</string>
+
+    <!-- Label for overflow menu option that deletes all record data in the app [CHAR LIMIT=20] -->
+    <string name="action_delete_all_entries">Delete All Records</string>
+
+    <!-- Title text for the empty view, which describes the empty dog house image [CHAR LIMIT=50] -->
+    <string name="empty_view_title_text">We need some music in here...</string>
+
+    <!-- Subtitle text for the empty view that prompts the user to add a record [CHAR LIMIT=50] -->
+    <string name="empty_view_subtitle_text">Get started by adding a Record</string>
+
+    <!-- Title for the activity to add a new record [CHAR LIMIT=20] -->
+    <string name="editor_activity_title_new_record">Add a Record</string>
+
+    <!-- Title for the activity to edit an existing record [CHAR LIMIT=20] -->
+    <string name="editor_activity_title_edit_record">Edit Record</string>
+
+    <!-- Label for editor menu option to save record and leave editor [CHAR LIMIT=20] -->
+    <string name="action_save">Save</string>
+
+    <!-- Label for editor overflow menu option that deletes the current record [CHAR LIMIT=20] -->
+    <string name="action_delete">Delete</string>
+
+    <!-- Toast message in editor when new record has been successfully inserted [CHAR LIMIT=NONE] -->
+    <string name="editor_insert_record_successful">Record saved</string>
+
+    <!-- Toast message in editor when new record has failed to be inserted [CHAR LIMIT=NONE] -->
+    <string name="editor_insert_record_failed">Error with saving record</string>
+
+    <!-- Toast message in editor when current record was successfully updated [CHAR LIMIT=NONE] -->
+    <string name="editor_update_record_successful">Record updated</string>
+
+    <!-- Toast message in editor when current record has failed to be updated [CHAR LIMIT=NONE] -->
+    <string name="editor_update_record_failed">Error with updating record</string>
+
+    <!-- Dialog message when user is leaving editor but hasn't saved changes [CHAR LIMIT=NONE] -->
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+
+    <!-- Dialog button text for the option to discard a user's changes [CHAR LIMIT=20] -->
+    <string name="discard">Discard</string>
+
+    <!-- Dialog button text for the option to keep editing the current record [CHAR LIMIT=20] -->
+    <string name="keep_editing">Keep Editing</string>
+
+    <!-- Toast message in editor when current record was successfully deleted [CHAR LIMIT=NONE] -->
+    <string name="editor_delete_record_successful">Record deleted</string>
+
+    <!-- Toast message in editor when current record has failed to be deleted [CHAR LIMIT=NONE] -->
+    <string name="editor_delete_record_failed">Error with deleting record</string>
+
+    <!-- Dialog message to ask the user to confirm deleting the current record [CHAR LIMIT=NONE] -->
+    <string name="delete_dialog_msg">Delete this record?</string>
+
+    <!-- Dialog button text for the option to confirm deleting the current record [CHAR LIMIT=20] -->
+    <string name="delete">Delete</string>
+
+    <!-- Dialog button text for the option to cancel deletion of the current record [CHAR LIMIT=20] -->
+    <string name="cancel">Cancel</string>
+
+    <!-- Label for album name category of attributes in the editor [CHAR LIMIT=30] -->
+    <string name="category_album_name">Album</string>
+
+    <!-- Label for band name category of attributes in the editor [CHAR LIMIT=30] -->
+    <string name="category_band_name">Band</string>
+
+    <!-- Label for quantity information in the editor [CHAR LIMIT=30] -->
+    <string name="category_quantity">Stock</string>
+
+    <!-- Label for price information in the editor [CHAR LIMIT=30] -->
+    <string name="category_price">Price</string>
+
+    <!-- Label for album cover information in the editor [CHAR LIMIT=30] -->
+    <string name="category_album_cover">Add a Image</string>
+
+    <!-- Label for measurement information in the editor [CHAR LIMIT=30] -->
+    <string name="category_supplier_name">Supplier</string>
+
+    <!-- Label for measurement information in the editor [CHAR LIMIT=30] -->
+    <string name="category_supplier_email">email</string>
+
+    <!-- Text hint for name field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_album_name">Album Name</string>
+
+    <!-- Text hint for breed field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_band_name">Band Name</string>
+
+    <!-- Text hint for name field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_price">Price</string>
+
+    <!-- Units for quantity of the record [CHAR LIMIT=5] -->
+    <string name="hint_Quantity">Quantity</string>
+
+    <!-- Units for Supplier Name of the record [CHAR LIMIT=5] -->
+    <string name="hint_Supplier_name">Supplier Name</string>
+
+    <!-- Units for Supplier email of the record [CHAR LIMIT=5] -->
+    <string name="hint_Supplier_email">Supplier email</string>
+
+    <!-- Label for the record unknown [CHAR LIMIT=20] -->
+    <string name="unknown">Unknown</string>
+
+    <string name="minus">-</string>
+
+    <string name="plus">+</string>
+
+    <string name="negative_stock">You cannot have a negative stock</string>
+
+    <string name="sold_out">Sold Out ;(</string>
+
+    <string name="field_required">This Field cannot be empty</string>
+</resources>
