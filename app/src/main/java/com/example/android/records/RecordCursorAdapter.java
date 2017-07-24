@@ -20,6 +20,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -83,21 +84,21 @@ public class RecordCursorAdapter extends CursorAdapter {
     @Override
     public void bindView(View view, final Context context, Cursor cursor) {
 
+        ViewHolder holder; // to reference the child views for later action
+        holder = new ViewHolder();
 
         // Find individual views that we want to modify in the list item layout
-        TextView albumNameTextView = (TextView) view.findViewById(R.id.album_name);
-        TextView bandNameTextView = (TextView) view.findViewById(R.id.band_name);
-        TextView quantityTextView = (TextView) view.findViewById(R.id.quantiy);
-        TextView priceTextView = (TextView) view.findViewById(R.id.price);
-        saleImageView = (ImageView) view.findViewById(R.id.sale_button);
-
+        holder.albumNameTextView = (TextView) view.findViewById(R.id.album_name);
+        holder.bandNameTextView = (TextView) view.findViewById(R.id.band_name);
+        holder.quantityTextView = (TextView) view.findViewById(R.id.quantiy);
+        holder.priceTextView = (TextView) view.findViewById(R.id.price);
+        holder.saleImageView = (ImageView) view.findViewById(R.id.sale_button);
 
         // Find the columns of the record attributes that we're interested in
         int albumNameColumnIndex = cursor.getColumnIndex(RecordEntry.COLUMN_ALBUM_NAME);
         int bandNameColumnIndex = cursor.getColumnIndex(RecordEntry.COLUMN_BAND_NAME);
         int quantityColumnIndex = cursor.getColumnIndex(RecordEntry.COLUMN_QUANTITY);
         int priceNameColumnIndex = cursor.getColumnIndex(RecordEntry.COLUMN_PRICE);
-
         int idColumnIndex = cursor.getColumnIndex(RecordEntry._ID);
 
         // Read the record attributes from the Cursor for the current record
@@ -109,13 +110,13 @@ public class RecordCursorAdapter extends CursorAdapter {
         final int newQuantity;
 
         // Update the TextViews with the attributes for the current record
-        albumNameTextView.setText(albumName);
-        bandNameTextView.setText(bandName);
-        quantityTextView.setText(Integer.toString(quantity));
-        priceTextView.setText(Integer.toString(price));
+        holder.albumNameTextView.setText(albumName);
+        holder.bandNameTextView.setText(bandName);
+        holder.quantityTextView.setText(Integer.toString(quantity));
+        holder.priceTextView.setText(Integer.toString(price));
 
         // Sale button reduces the quantity of the record in stock by -1.
-        saleImageView.setOnClickListener(new View.OnClickListener() {
+        holder.saleImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
